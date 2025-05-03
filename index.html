@@ -16,5 +16,15 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      const redirect = () => {
+        const pathname = window.location.pathname;
+        const base = "/countries-info-page";
+        if (pathname.startsWith(base) && pathname !== base + "/") {
+          window.location.replace(base + "/");
+        }
+      };
+      redirect();
+    </script>
   </body>
 </html>
